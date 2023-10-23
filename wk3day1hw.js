@@ -48,11 +48,14 @@ of those numbers. For example, sumArray([2, 4, 5]);would return 11. */
 
 const sumArray = (arrayX) => {
     let sum = 0
-    return Array.isArray(arrayX) ? arrayX.forEach((element) => {
-        sum += element
-        return sum
-    })
-    : 'Enter a valid numeric array'
+        if(Array.isArray(arrayX)) {
+            arrayX.forEach((element) => {
+                sum += element
+                return sum
+            })
+        }  
+        else
+            'Enter a valid numeric array'
 }
 
 console.log(sumArray([34, 98, 54, 87, 89, 44, 66, 42]))
