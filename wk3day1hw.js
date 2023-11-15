@@ -51,11 +51,12 @@ const sumArray = (arrayX) => {
         if(Array.isArray(arrayX)) {
             arrayX.forEach((element) => {
                 sum += element
-                return sum
             })
         }  
-        else
-            'Enter a valid numeric array'
+        else {
+            console.log('Enter a valid numeric array')
+        }
+        return sum    
 }
 
 console.log(sumArray([34, 98, 54, 87, 89, 44, 66, 42]))
@@ -65,18 +66,19 @@ takes an array of numbers and returns the
 product those numbers. For example, multiplyArray([2, 4, 5]);would return 
 40. */
 
-// function multiplyArray(arrayX) {
-//     let product = 1
-//     if (Array.isArray(arrayX)) {
-//         arrayX.forEach((element) => {
-//             product *= element
-//             return product
-//         })
-//     } else
-//     return 'Enter valid array input'
-// }
+function multiplyArray(arrayX) {
+     let product = 1
+     if (Array.isArray(arrayX)) {
+         arrayX.forEach((element) => {
+             product *= element
+         })
+     } else {
+    return 'Enter valid array input'
+}
+      return product
+ }
 
-// console.log(multiplyArray([34, 98, 54, 87, 89, 44, 66, 42]))
+ console.log(multiplyArray([34, 98, 54, 87, 89, 44, 66, 42]))
 
 /* 6. Define a function, as a function expression, numArgs that returns the number of arguments
 passed to the function when called. */
@@ -98,13 +100,13 @@ and a number as arguments; and returns an array of the strings that are longer t
 passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);would
 return ["hello", "morning"]. */
 
-// function stringsLongerThan (arrayX, x) {
-//     let newArrayResult
-//     for (let element of arrayX) {
-//         if (arrayX[element].length > x)
-//             newArrayResult.unshift(element)
-//     }
-//     return newArrayResult
-// }
+function stringsLongerThan (arrayX, x) {
+    let newArrayResult = []
+    for (let element of arrayX) {
+        if (arrayX[element].length > x)
+            newArrayResult = arrayX.unshift(element)
+    }
+    return newArrayResult
+}
 
-// console.log(stringsLongerThan(['function', 'declaration', 'and', 'function', 'expression', 'are', 'really', 'stretching', 'my', 'brain'], 6))
+console.log(stringsLongerThan(['function', 'declaration', 'and', 'function', 'expression', 'are', 'really', 'stretching', 'my', 'brain'], 6))
